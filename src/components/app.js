@@ -1,6 +1,7 @@
 import { h } from 'preact';
 import { Router } from 'preact-router';
 
+import baseroute from '../baseroute';
 import Header from './header';
 
 // Code-splitting is automated for `routes` directory
@@ -10,7 +11,7 @@ const App = () => (
 	<div id="app">
 		<Header />
 		<Router>
-			<Page path="/page/:page" />
+			<Page path={`${baseroute}/page/:page`} />
 		</Router>
 	</div>
 )
